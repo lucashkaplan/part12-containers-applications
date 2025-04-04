@@ -5,7 +5,7 @@ FROM node:20
 WORKDIR /usr/src/app
 
 # copy all files from current dir to working dir in image
-# set user and group ownership of all files to node
+# set user and group ownership of all files to user node
 COPY --chown=node:node . .
 
 RUN npm ci 
