@@ -11,3 +11,5 @@ services:
     volumes:
       # location in host : location in container
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      # preserve changes from DB w/in container to outside of container
+      - ./mongo_data:/data/db
